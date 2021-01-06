@@ -84,9 +84,9 @@ if __name__ == "__main__":
   #c2 is c but with an added zero
   c2 = crc(b'\x00', init=c)
   print(hex(c), hex(c2))
-  c3 = c>>8 ^ crcTable[c&0xff]
 
   #c3 is the same as c2 but calcd another way
+  c3 = c>>8 ^ crcTable[c&0xff]
   print(hex(c3), hex(crcTable[c&0xff]))
 
   #now reverse this!
